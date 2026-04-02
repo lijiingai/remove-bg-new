@@ -165,7 +165,7 @@
             formData.append('image', file);
             
             try {
-                const response = await fetch('/remove-bg', {
+                const response = await fetch('/api/remove-bg', {
                     method: 'POST',
                     body: formData
                 });
