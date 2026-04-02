@@ -12,9 +12,9 @@ export async function onRequestPost(context) {
       });
     }
     
-    const apiKey = env.REMOVEBG_API_KEY;
+    const apiKey = env.REMOVEBG_API_KEY || 'dzkktUBoa8v3K1h56BJaj1rU';
     
-    if (!apiKey || apiKey === 'your_api_key_here') {
+    if (!apiKey) {
       return new Response(JSON.stringify({ error: 'API Key 未配置' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }
